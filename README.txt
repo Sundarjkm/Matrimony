@@ -1,22 +1,21 @@
-EC Matrimony — site template
-=============================
+Put your candidate portrait photos in this folder.
 
-Folder layout:
-    ECMatrimony.html      ← open this in any browser
-    photos/
-        photo1.jpg        ← your candidate 1
-        photo2.jpg        ← your candidate 2
-        ...
+File naming:
+    photo1.jpg   → linked to profile EC0001
+    photo2.jpg   → linked to profile EC0002
+    photo3.jpg   → linked to profile EC0003
+    ...
+    photo10.jpg  → linked to profile EC0010
 
-How to fill in candidates:
-1. Drop your portrait JPGs into the photos/ folder, named photo1.jpg ...
-2. Open ECMatrimony.html in a text editor (Notepad, VS Code, anything).
-3. Find the line that starts:    const profiles = [
-4. Edit each block:
-     id, name, age, height, type (bride/groom), nri (true/false),
-     edu, job, company, income, district, rasi, star, caste, sub, lang,
-     avatar (emoji fallback), avClass (av-1..av-6 background colour), desc.
-5. Save the file and refresh the page in your browser.
+Tips:
+- JPG or PNG both work. If you use PNG, rename the .jpg in the HTML to .png
+  for that profile (open ECMatrimony.html and edit the "photo:" line).
+- A roughly portrait-shaped image (taller than wide) looks best because the
+  card box is 260px tall.
+- If a photo file is missing, the card automatically shows the emoji avatar
+  instead — nothing breaks.
+- To add an 11th, 12th, ... candidate, open ECMatrimony.html, find the
+  profiles array, copy any one block, paste it below, and bump the id /
+  photoNN.jpg number.
 
-To add more than 10 candidates: copy any block in the array, paste it below,
-change the id to EC0011 / EC0012 / ... and the photo path to photo11.jpg etc.
+Delete this README once you have added your photos — it isn't used by the site.
